@@ -3,15 +3,17 @@ document.addEventListener("DOMContentLoaded", function() {
     var passwordContainer = document.querySelector('.password-container');
     var emailInput = document.querySelector('.form-field[type="email"]');
     var passwordInput = document.querySelector('#password');
-    var invalidEmailText = document.querySelector('.invalid-email');
-    var invalidPasswordText = document.querySelector('.invalid-password');
+    var invalidEmailText = document.getElementById('emailNotValid');
+    var invalidPasswordText = document.getElementById('passwordNotValid');
 
+    // to check if the input is in email form 
     function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[cC][oO][mM]$/.test(email);
     }
 
     function handleNextButtonClick() {
         if (passwordContainer.style.display === 'none') {
+            // check if email is available on the sql sheet
             if (isValidEmail(emailInput.value)) {
                 passwordContainer.style.display = 'block';
                 invalidEmailText.style.display = 'none';
@@ -19,14 +21,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 invalidEmailText.style.display = 'block';
             }
         } else {
+            // check if password matches the password on the sql sheet
             if (passwordInput.value.length >= 5) {
-                // Assuming your server-side authentication endpoint is correct
-                window.location.href = '/homepage'; // Redirect to homepage
+                // redirect to the home page
+                window.location.href = 'https://www.example.com'; 
             } else {
                 invalidPasswordText.style.display = 'block';
             }
         }
-    }    
+    }
+
     nextButton.addEventListener('click', handleNextButtonClick);
 
     document.addEventListener('keydown', function(event) {
