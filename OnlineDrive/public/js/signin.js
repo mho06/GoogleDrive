@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var invalidEmailText = document.getElementById('emailNotValid');
     var invalidPasswordText = document.getElementById('passwordNotValid');
 
+    // to check if the input is in email form 
     function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[cC][oO][mM]$/.test(email);
     }
