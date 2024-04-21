@@ -16,17 +16,23 @@
                 <div class="name-container">
                     <p>First Name:</p>
                     <input type="text" class="form-field" placeholder="First Name" name="firstName" required>
+                    <div class="invalid" id="firstNameError"></div>
                     <p>Last Name:</p>
                     <input type="text" class="form-field" placeholder="Last Name" name="lastName" required>
+                    <div class="invalid" id="lastNameError"></div>
                 </div>
                 <div class="email-container" style="display: none;">
                     <p>Email:</p>
                     <input type="email" class="form-field" placeholder="Email" name="email" required>
+                    <div class="invalid" id="emailError"></div>
                 </div>
                 <div class="password-container" style="display: none;">
                     <p>Password:</p>
-                    <input type="password" class="form-field" placeholder="Password" name="password" required>
-                    <i id="eye" class="fa fa-eye" aria-hidden="true" onclick="togglePasswordVisibility()"></i>
+                    <div class="password-input">
+                        <input type="password" class="form-field" placeholder="Password" name="password" required>
+                        <i id="eye" class="fa fa-eye" aria-hidden="true" onclick="togglePasswordVisibility()"></i>
+                    </div>
+                    <div class="invalid" id="passwordError"></div>
                 </div>
                 <div class="button-container">
                     <button type="button" class="create-account" onclick="goToSignin()">Login</button>

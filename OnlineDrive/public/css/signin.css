@@ -75,6 +75,6 @@ body {
 padding: 0 20px;
 color: #4285f4;
 }
-.invalid-email, .invalid-password{
+.invalid {
     color: red;
 }

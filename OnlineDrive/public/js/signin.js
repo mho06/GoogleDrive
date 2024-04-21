@@ -1,17 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     var nextButton = document.querySelector('#next-button');
     var passwordContainer = document.querySelector('.password-container');
-<<<<<<< Updated upstream:OnlineDrive/public/js/login.js
-    var emailInput = document.querySelector('.form-field[type="email"]');
-    var passwordInput = document.querySelector('#password');
-    var invalidEmailText = document.querySelector('.invalid-email');
-    var invalidPasswordText = document.querySelector('.invalid-password');
-=======
     var emailInput = document.querySelector('input[name="email"]');
     var passwordInput = document.querySelector('input[name="password"]');
     var emailError = document.getElementById('emailError');
     var passwordError = document.getElementById('passwordError');
->>>>>>> Stashed changes:OnlineDrive/public/js/signin.js
 
     function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -19,25 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function handleNextButtonClick() {
         if (passwordContainer.style.display === 'none') {
-<<<<<<< Updated upstream:OnlineDrive/public/js/login.js
-            if (isValidEmail(emailInput.value)) {
-                passwordContainer.style.display = 'block';
-                invalidEmailText.style.display = 'none';
-            } else {
-                invalidEmailText.style.display = 'block';
-            }
-        } else {
-            if (passwordInput.value.length >= 5) {
-                // Assuming your server-side authentication endpoint is correct
-                window.location.href = '/homepage'; // Redirect to homepage
-            } else {
-                invalidPasswordText.style.display = 'block';
-=======
             if (!isValidEmail(emailInput.value)) {
                 emailError.textContent = 'Email format is invalid';
                 emailError.style.display = 'block';
                 return;
->>>>>>> Stashed changes:OnlineDrive/public/js/signin.js
             }
             fetch('/signin/email', {
                 method: 'POST',
@@ -61,9 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 emailError.style.display = 'block';
             });
         }
-<<<<<<< Updated upstream:OnlineDrive/public/js/login.js
-    }    
-=======
     }
 
     function handlePasswordCheck() {
@@ -89,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
->>>>>>> Stashed changes:OnlineDrive/public/js/signin.js
     nextButton.addEventListener('click', handleNextButtonClick);
 
     document.addEventListener('keydown', function(event) {
