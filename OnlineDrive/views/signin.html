@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1 class="header">Sign in</h1>
+            <h4 class="header2">to continue to Google Drive</h4>
+        </div>
+        <div class="right">
+            <div class="form-container">
+                <p>Email:</p>
+                <input type="email" class="form-field" placeholder="Email" name="email">
+                <span id="emailError" class="invalid" style="display: none;">Email does not exist</span> <!-- Error message for email -->
+                <a href="https://www.example.com" class="forgot">Forgot email?</a>
+                
+                <div class="password-container" style="display: none;">
+                    <p>Password:</p>
+                    <input id="password" type="password" class="form-field" placeholder="Password" name="password">
+                    <a id="eye" class="fa fa-eye" onclick="togglePasswordVisibility()" aria-hidden="true"></a>
+                    <span id="passwordError" class="invalid" style="display: none;">Password is incorrect</span> <!-- Error message for password -->
+                    <a href="https://www.example.com" class="forgot">Forgot password?</a>
+                </div>
+                
+                <div class="button-container">
+                    <button class="create-account" onclick="goToSignup()">Create Account</button>
+                    <button id="next-button" class="next-button">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/signin.js"></script>
+</body>
+</html>
