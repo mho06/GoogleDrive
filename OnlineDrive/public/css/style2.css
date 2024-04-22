@@ -1,0 +1,382 @@
+/* STYLE for the main content of the drive */
+
+
+/*For All  */
+.body{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 100vh;
+}
+
+.logo-img-main{
+    width: 20px; 
+    height: 20px;
+}
+.title{
+    font-size: x-large;
+}
+
+/* -------------------------------------------- */
+
+/* search layer */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 44px;
+    background-color: #E9EEF6;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 10px ;
+    padding: 5px;
+    margin-left: 40px;
+}
+#search-button {
+    border: none;
+    background: transparent;
+    padding: 8px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    margin-left: 5px;  
+}
+#search-button:hover{
+    background-color: #DCE0E8;
+}
+#search-img {
+    width: 18px;
+    height: 18px;
+    margin: 5px;
+    /* padding: 1px; */
+}
+#search-bar {
+    width: 100%;
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 15px;
+    padding: 10px;
+}
+#search-bar::placeholder{
+    color: black;
+}
+#setting-filter{
+    border: none;
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+#setting-filter:hover{
+    background-color: #DCE0E8;
+}
+#setting-filter-img{
+    width: 18px;
+    height: 18px;
+}
+
+
+/* main-box  */
+#main-box{
+    height: calc(100% - 50px); /* scrollable content */
+    overflow-y: auto; /* Enable vertical scrolling only */
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 40px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* features: Type / People / Modified / Location */
+.features-container {
+    display: flex;
+
+}
+.features {
+    margin-right: 10px;
+    position: relative;
+}
+.feature-btn {
+    text-align: left;
+    color: #444746;
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 10px;
+    width: 110px;
+    cursor: pointer;
+    border: 1px solid #747775;
+    padding-left: 20px;
+}
+/* Styles for the arrow icon */
+.arrow {
+    margin-left: 5px;
+    font-size: 8pt;
+    /* vertical-align: middle; */
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+.dropdown-content button:hover {
+    background-color: #f1f1f1;
+}
+.show {
+    display: block;
+}
+
+
+
+/* creating a table file: */
+.file-header {
+    display: flex;
+    /* justify-content: space-between; */
+    border-bottom: 1px solid #C7C7C7;
+    
+    /* vertical-align: middle; */
+}
+
+.file-column {
+    /* flex: 1; */
+    padding: 5px 15px;
+    width: 15%;
+    border-color: transparent;
+    display: flex;
+    justify-content: center;
+    /* background-color: #444746; */
+}
+
+
+#name{
+    padding-right: 400px;
+}
+
+#more{
+    height: 18px;
+    width: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    
+}
+#more-img{
+    width: 15px;
+}
+#more:hover{
+    background-color: rgb(231,232,235);
+}
+.more-btn{
+    position: relative;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* ------------------------------------------------------ */
+
+
+/* Home content */
+
+
+/* Layer 1 */
+.Layer1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#view-details-img{
+    width: 20px;
+    height: 20px;
+}
+#details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: transparent;
+    background-color: transparent;
+    vertical-align: middle;
+}
+#details:hover{
+    background-color: rgb(231,232,235);
+}
+
+/* Layer 2 */
+.Layer2{
+    display: flex;
+    justify-content: space-between;
+}
+.Layer2 .title{
+    font-size: x-large;
+}
+
+/* File and Folders btn */
+.ff-container {
+    display: flex;
+    justify-content: space-between;
+}
+.ff-btn {
+    width: fit-content;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Ensure the tick icon does not overflow */
+    display: flex;
+    align-items: center;
+}
+.ff-btn:first-child {
+    border-radius: 20px 0 0 20px;
+    border-right: 2px solid #ccc;
+    margin-right: -5px;
+}
+.ff-btn:last-child {
+    border-radius: 0 20px 20px 0;
+    border-left: 1px solid #ccc;
+}
+.ff-btn:hover {
+    background-color: #B3D7EF;
+}
+.tick {
+    display: none;
+    margin-left: 5px; /* Adjust as needed */
+    width: 20px; /* Adjust size of tick icon */
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+    padding-right: 10px;
+}
+.logo-img-main1{
+    padding-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+.active .logo-img-main1 {
+    display: none;
+}
+.active .tick {
+    display: block;
+    transform: scale(1.2);
+}
+.logo-img-main{
+    width: 20px; /* Adjust width and height of main images */
+    height: 20px;
+    padding-right: 10px;
+}
+
+
+/* Layout btn*/
+.layout-container{
+    display: flex;
+    
+}
+.layout-btn{
+    width: fit-content;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 10px;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    
+}
+.layout-btn:first-child {
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    border-right: 2px solid #ccc; 
+    margin-right: -5px;
+}
+.layout-btn:last-child {
+    border: 1px solid #ccc;
+    border-radius: 0 20px 20px 0;
+    border-left: 1px solid #ccc;
+    margin-right: -5px;
+}
+.layout-btn:first-child:hover{
+    background-color: #B3D7EF;
+}
+.layout-btn:last-child:hover{
+    background-color: #B3D7EF;
+}
+.logo-img-main2{
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+}
+.active .logo-img-main2{
+    display:none ;
+}
+
+
+/* ------------------------------------------------------ */
+
+
+/* My drive css */
+.features-mydrive{
+    position: relative;
+}
+.mydrive-button{
+    margin-bottom: 20px;
+    font-size: 18pt;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 5px 15px 5px 15px;
+    margin-right: 650px;
+    cursor: pointer;
+}
+.mydrive-button:hover{
+    background-color: #E9EEF6;
+}
+
+.main-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ------------------------------------------------------ */
+
+/* Shared with me */
+.sharedA{
+    display: flex;
+}
+.layout-container2{
+    display: flex;
+    margin-right: 10px;
+}
