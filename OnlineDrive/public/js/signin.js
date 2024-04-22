@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 passwordError.textContent = data.message;  // 'Password is incorrect'
                 passwordError.style.display = 'block';
             } else {
-                window.location.href = 'https://www.example.com';  // Redirect on successful login
+                window.location.href = '/index';  // Redirect on successful login
                 passwordError.style.display = 'none';
             }
         })
